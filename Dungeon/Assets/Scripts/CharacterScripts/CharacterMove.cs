@@ -13,14 +13,24 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Get input from the player
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        // Check if any option box is active
+        if (!OptionBoxManager.isOptionBoxOpen)
+        {
+            // Get input from the player
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
 
-        // Calculate the movement direction
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+            // Calculate the movement direction
+            Vector2 movement = new Vector2(moveHorizontal, moveVertical);
 
-        // Move the player
-        rb.velocity = movement * speed;
+            // Move the player
+            rb.velocity = movement * speed;
+        }
+        else
+        {
+            // If any option box is active, prevent movement
+            rb.velocity = Vector2.zero;
+        }
     }
 }
+
