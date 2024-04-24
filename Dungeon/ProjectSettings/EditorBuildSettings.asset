@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon.unity
     guid: 55af68e0dab07cf4ca8c957f8d847fc7
+  - enabled: 1
+    path: Assets/Scenes/Dungeon 1 Wrath.unity
+    guid: 005393a9cd4523d44a622f349047e18c
   m_configObjects: {}
