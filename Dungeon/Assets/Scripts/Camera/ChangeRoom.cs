@@ -13,6 +13,24 @@ public class RoomTrigger : MonoBehaviour
     private void Start()
     {
         roomCollider = GetComponent<Collider2D>();
+
+        // Find the CameraController component attached to the main camera
+        if (cameraController == null)
+        {
+            Camera mainCamera = Camera.main;
+            if (mainCamera != null)
+            {
+                cameraController = mainCamera.GetComponent<CameraController>();
+                if (cameraController == null)
+                {
+                    Debug.LogError("CameraController component not found on MainCamera.");
+                }
+            }
+            else
+            {
+                Debug.LogError("MainCamera not found in the scene.");
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
