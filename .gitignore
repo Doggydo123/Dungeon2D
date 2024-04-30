@@ -40,3 +40,6 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+*.log
+/Dungeon/Logs
+Dungeon/Logs/shadercompiler-UnityShaderCompiler.exe0.log
