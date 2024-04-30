@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - RoomChangeCollider
+  - Wall
+  - TopWall
+  - BotWall
+  - LeftWall
+  - RightWall
   layers:
   - Default
   - TransparentFX
